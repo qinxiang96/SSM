@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../mybatis-mbg/mybatis-mbg.iml" filepath="$PROJECT_DIR$/../mybatis-mbg/mybatis-mbg.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mybatis_cache.iml" filepath="$PROJECT_DIR$/mybatis_cache.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../spring_helloWorld/spring_helloWorld.iml" filepath="$PROJECT_DIR$/../spring_helloWorld/spring_helloWorld.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../spring_ioc_xml/spring_ioc_xml.iml" filepath="$PROJECT_DIR$/../spring_ioc_xml/spring_ioc_xml.iml" />
+    </modules>
+  </component>
+</project>

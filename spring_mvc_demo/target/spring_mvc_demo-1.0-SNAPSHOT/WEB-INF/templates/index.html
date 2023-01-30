@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<body>
+<h1>index.htmlqq</h1>
+<a th:href="@{/test/hello}">测试@RequestMapping注解所标识的位置</a>
+<a th:href="@{/mav}">测试mav</a>
+<a th:href="@{/session}">测试session</a>
+<br>
+<form th:action="@{/param}" method="post">
+    用户名：<input type="text" name="username"><br>
+    密码：<input type="password" name="password"><br>
+    <input type="submit" value="登录"><br>
+</form>
+</body>
+</html>

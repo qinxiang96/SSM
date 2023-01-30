@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--    配置一个bean对象，将bean对象交给IOC容器来管理-->
+    <bean id="helloworld" class="com.flora.spring.pojo.HelloWorld"></bean>
+</beans>

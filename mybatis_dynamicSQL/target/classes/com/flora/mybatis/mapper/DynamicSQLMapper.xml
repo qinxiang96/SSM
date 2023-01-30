@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.flora.mybatis.mapper.DynamicSQLMapper">
+    <select id="getEmpByCondition" resultType="Emp">
+        select * from t_emp
+        <where>
+            <if test="empName !='' and empName != null">
+                emp_name = #{empName}
+            </if>
+            <if test="age !='' and age != null">
+                and age = #{age}
+            </if>
+            <if test="gender !='' and gender != null">
+                and gender = #{gender}
+            </if>
+        </where>
+
+    </select>
+    <sql id="itemSql">
+        null, #{emp.empName}, #{emp.age}, #{emp.gender}, null
+    </sql>
+    <insert id="insertBenchEmp">
+        insert into t_emp values
+        <foreach collection="emps" item="emp" separator=",">
+            (<include refid="itemSql"></include>)
+        </foreach>
+    </insert>
+    <delete id="deleteBenchEmp">
+        delete from t_emp where
+        <foreach collection="empIds" item="empId" separator="or">
+            emp_id = #{empId}
+        </foreach>
+    </delete>
+
+</mapper>
